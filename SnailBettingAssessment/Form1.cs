@@ -16,5 +16,13 @@ namespace SnailBettingAssessment
         {
             InitializeComponent();
         }
+
+        public Form1(int snailsPassed,int bettersPassed)
+        {
+            InitializeComponent();
+        }
+
+
+
     }
 }
