@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.bntStart = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cbxSnails = new System.Windows.Forms.ComboBox();
@@ -39,7 +40,7 @@
             // 
             this.bntStart.Font = new System.Drawing.Font("DrippyPlums", 9.749999F, System.Drawing.FontStyle.Bold);
             this.bntStart.Location = new System.Drawing.Point(95, 106);
-            this.bntStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bntStart.Margin = new System.Windows.Forms.Padding(4);
             this.bntStart.Name = "bntStart";
             this.bntStart.Size = new System.Drawing.Size(100, 28);
             this.bntStart.TabIndex = 0;
@@ -73,7 +74,7 @@
             9,
             10});
             this.cbxSnails.Location = new System.Drawing.Point(108, 11);
-            this.cbxSnails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxSnails.Margin = new System.Windows.Forms.Padding(4);
             this.cbxSnails.Name = "cbxSnails";
             this.cbxSnails.Size = new System.Drawing.Size(160, 22);
             this.cbxSnails.TabIndex = 2;
@@ -104,7 +105,7 @@
             9,
             10});
             this.cbxBetters.Location = new System.Drawing.Point(108, 73);
-            this.cbxBetters.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxBetters.Margin = new System.Windows.Forms.Padding(4);
             this.cbxBetters.Name = "cbxBetters";
             this.cbxBetters.Size = new System.Drawing.Size(160, 22);
             this.cbxBetters.TabIndex = 4;
@@ -120,7 +121,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bntStart);
             this.Font = new System.Drawing.Font("DrippyPlums", 9.749999F);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form2";
             this.Text = "Race Conditions";
             this.ResumeLayout(false);
