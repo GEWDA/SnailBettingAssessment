@@ -12,16 +12,16 @@ namespace SnailBettingAssessment
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        //SETUP
+        public Form1(int snailsPassed=4,int bettersPassed=3)//defaults for unit testing purposes
         {
             InitializeComponent();
+            NumberOfSnails = snailsPassed;
+            NumberOfBetters = bettersPassed;
+            MessageBox.Show(Factory.s);
         }
-
-        public Form1(int snailsPassed,int bettersPassed)
-        {
-            InitializeComponent();
-        }
-
+        public int NumberOfSnails { get; set; }
+        public int NumberOfBetters { get; set; }
 
 
     }
