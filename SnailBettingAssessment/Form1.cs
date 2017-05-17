@@ -18,7 +18,6 @@ namespace SnailBettingAssessment
             InitializeComponent();
             NumberOfSnails = snailsPassed;
             NumberOfBetters = bettersPassed;
-            MessageBox.Show(Factory.s);
         }
         public int NumberOfSnails { get; set; }
         public int NumberOfBetters { get; set; }

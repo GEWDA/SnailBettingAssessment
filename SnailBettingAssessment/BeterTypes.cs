@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SnailBettingAssessment
 {
-    class Rich : Better
+    class Rich : Beter
     {
         public Rich()
         {
@@ -14,7 +14,7 @@ namespace SnailBettingAssessment
         }
     }
 
-    class Normal : Better
+    class Normal : Beter
     {
         public Normal()
         {
@@ -23,7 +23,7 @@ namespace SnailBettingAssessment
         
     }
 
-    class Poor : Better
+    class Poor : Beter
     {
         public Poor()
         {

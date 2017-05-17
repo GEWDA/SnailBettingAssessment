@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SnailBettingAssessment
 {
-    abstract class Better
+    abstract class Beter
     {
         public int CurrentBalance { get; set; }
         public int[] CurrentBet { get; set; } = {5, 1};

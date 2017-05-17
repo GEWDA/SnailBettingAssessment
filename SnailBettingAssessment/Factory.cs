@@ -12,9 +12,9 @@ namespace SnailBettingAssessment
     {
         static private string[] _names = File.ReadAllLines(Directory.GetCurrentDirectory()+@"\..\..\Names.txt");
         static private Random _random = new Random();
-        static public Better[] GenerateBetters(int howMany)
+        static public Beter[] GenerateBetters(int howMany)
         {
-            Better[] bettersArray = new Better[howMany];
+            Beter[] bettersArray = new Beter[howMany];
             for (int i = 0; i < howMany; i++)
             {
                 switch (_random.Next(1,3))
@@ -33,6 +33,7 @@ namespace SnailBettingAssessment
             return bettersArray;
         }
 
+        //static public 
 
 
 
