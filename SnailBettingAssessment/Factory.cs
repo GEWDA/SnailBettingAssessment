@@ -29,14 +29,19 @@ namespace SnailBettingAssessment
                         bettersArray[i] = new Poor();
                         break;
                 }
+                bettersArray[i].Name = _names[_random.Next(0,_names.Length-1)];//select a random name from the list of names
             }
             return bettersArray;
         }
 
-        //static public 
-
-
-
-
+        static public Snail[] GenerateSnails(int howMany)
+        {
+            Snail[] snailArray = new Snail[howMany];
+            for (int i = 0; i < howMany; i++)
+            {
+                snailArray[i]=new Snail();
+            }
+            return snailArray;
+        }
     }
 }
