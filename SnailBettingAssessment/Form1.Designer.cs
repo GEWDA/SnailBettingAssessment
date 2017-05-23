@@ -652,60 +652,70 @@
             this.toolSnail1Win.Name = "toolSnail1Win";
             this.toolSnail1Win.Size = new System.Drawing.Size(152, 22);
             this.toolSnail1Win.Text = "Snail 1";
+            this.toolSnail1Win.Click += new System.EventHandler(this.fakeToolActivateWin_Click);
             // 
             // toolSnail2Win
             // 
             this.toolSnail2Win.Name = "toolSnail2Win";
             this.toolSnail2Win.Size = new System.Drawing.Size(152, 22);
             this.toolSnail2Win.Text = "Snail 2";
+            this.toolSnail2Win.Click += new System.EventHandler(this.fakeToolActivateWin_Click);
             // 
             // toolSnail3Win
             // 
             this.toolSnail3Win.Name = "toolSnail3Win";
             this.toolSnail3Win.Size = new System.Drawing.Size(152, 22);
             this.toolSnail3Win.Text = "Snail 3";
+            this.toolSnail3Win.Click += new System.EventHandler(this.fakeToolActivateWin_Click);
             // 
             // toolSnail4Win
             // 
             this.toolSnail4Win.Name = "toolSnail4Win";
             this.toolSnail4Win.Size = new System.Drawing.Size(152, 22);
             this.toolSnail4Win.Text = "Snail 4";
+            this.toolSnail4Win.Click += new System.EventHandler(this.fakeToolActivateWin_Click);
             // 
             // toolSnail5Win
             // 
             this.toolSnail5Win.Name = "toolSnail5Win";
             this.toolSnail5Win.Size = new System.Drawing.Size(152, 22);
             this.toolSnail5Win.Text = "Snail 5";
+            this.toolSnail5Win.Click += new System.EventHandler(this.fakeToolActivateWin_Click);
             // 
             // toolSnail6Win
             // 
             this.toolSnail6Win.Name = "toolSnail6Win";
             this.toolSnail6Win.Size = new System.Drawing.Size(152, 22);
             this.toolSnail6Win.Text = "Snail 6";
+            this.toolSnail6Win.Click += new System.EventHandler(this.fakeToolActivateWin_Click);
             // 
             // toolSnail7Win
             // 
             this.toolSnail7Win.Name = "toolSnail7Win";
             this.toolSnail7Win.Size = new System.Drawing.Size(152, 22);
             this.toolSnail7Win.Text = "Snail 7";
+            this.toolSnail7Win.Click += new System.EventHandler(this.fakeToolActivateWin_Click);
             // 
             // toolSnail8Win
             // 
             this.toolSnail8Win.Name = "toolSnail8Win";
             this.toolSnail8Win.Size = new System.Drawing.Size(152, 22);
             this.toolSnail8Win.Text = "Snail 8";
+            this.toolSnail8Win.Click += new System.EventHandler(this.fakeToolActivateWin_Click);
             // 
             // toolSnail9Win
             // 
             this.toolSnail9Win.Name = "toolSnail9Win";
             this.toolSnail9Win.Size = new System.Drawing.Size(152, 22);
             this.toolSnail9Win.Text = "Snail 9";
+            this.toolSnail9Win.Click += new System.EventHandler(this.fakeToolActivateWin_Click);
             // 
             // toolSnail10Win
             // 
             this.toolSnail10Win.Name = "toolSnail10Win";
             this.toolSnail10Win.Size = new System.Drawing.Size(152, 22);
             this.toolSnail10Win.Text = "Snail 10";
+            this.toolSnail10Win.Click += new System.EventHandler(this.fakeToolActivateWin_Click);
             // 
             // btnBet
             // 

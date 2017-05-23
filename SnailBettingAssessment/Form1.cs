@@ -105,6 +105,13 @@ namespace SnailBettingAssessment
         {
             DevMode.Speed = true;
         }
+
+        private void fakeToolActivateWin_Click(object sender, EventArgs e)
+        {
+            ToolStripMenuItem theSender = (ToolStripMenuItem) sender;
+            DevMode.Win[0] = 1;
+            DevMode.Win[1] = Convert.ToInt16(theSender.Text.Substring(6))-1;
+        }
         private void btnBet_Click(object sender, EventArgs e)
         {
             foreach (Beter currentBeter in Beters)
@@ -141,7 +148,8 @@ namespace SnailBettingAssessment
         private void MoveASnail(Object source, System.Timers.ElapsedEventArgs e)
         {
             int whichSnail = RandInt.Next(0,NumberOfSnails);
-            Snails[whichSnail].Picture.Location= new Point(DevMode.Speed? Snails[whichSnail].Picture.Location.X+200 : Snails[whichSnail].Picture.Location.X+20,Snails[whichSnail].Picture.Location.Y);
+            //below line: if it isn't an instant win for this exact snail, if speedup is on, move 200 pixels, otherwise move 20 pixels
+            Snails[whichSnail].Picture.Location= new Point(DevMode.Win[0]==0 || DevMode.Win[1]!=whichSnail?DevMode.Speed? Snails[whichSnail].Picture.Location.X+200 : Snails[whichSnail].Picture.Location.X+20:Snails[whichSnail].Picture.Location.X + 9999999, Snails[whichSnail].Picture.Location.Y);
             if (Snails[whichSnail].Picture.Location.X+Snails[whichSnail].Picture.Width>=Width)//if the right side of the snail is at least touching the right side of the form
             {
                 RaceOver(whichSnail);
@@ -151,6 +159,8 @@ namespace SnailBettingAssessment
         private void RaceOver(int whichSnail)
         {
             SnailTimer.Stop();
+            DevMode.Speed = false;
+            DevMode.Win[0] = 0;
             MessageBox.Show("Snail " + (whichSnail+1).ToString() + " has won!");
             foreach (Beter currentBeter in Beters)
             {
