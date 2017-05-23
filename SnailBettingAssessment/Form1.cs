@@ -138,7 +138,10 @@ namespace SnailBettingAssessment
                 }
             }
         }
+        private void resizeFormToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
+        }
 
         /// <summary>
         /// Triggered by timer SnailTimer

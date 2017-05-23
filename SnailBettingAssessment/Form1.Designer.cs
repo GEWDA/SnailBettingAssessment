@@ -82,6 +82,7 @@
             this.toolSnail9Win = new System.Windows.Forms.ToolStripMenuItem();
             this.toolSnail10Win = new System.Windows.Forms.ToolStripMenuItem();
             this.btnBet = new System.Windows.Forms.Button();
+            this.resizeFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.nudBet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSnail)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -619,9 +620,10 @@
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolActivateDevSpeed,
-            this.forceWinToolStripMenuItem});
+            this.forceWinToolStripMenuItem,
+            this.resizeFormToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(155, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(155, 92);
             // 
             // toolActivateDevSpeed
             // 
@@ -728,6 +730,13 @@
             this.btnBet.UseVisualStyleBackColor = true;
             this.btnBet.Click += new System.EventHandler(this.btnBet_Click);
             // 
+            // resizeFormToolStripMenuItem
+            // 
+            this.resizeFormToolStripMenuItem.Name = "resizeFormToolStripMenuItem";
+            this.resizeFormToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.resizeFormToolStripMenuItem.Text = "Resize Form";
+            this.resizeFormToolStripMenuItem.Click += new System.EventHandler(this.resizeFormToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -748,6 +757,9 @@
             this.Font = new System.Drawing.Font("DrippyPlums", 9.749999F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1221, 593);
+            this.MinimumSize = new System.Drawing.Size(1221, 593);
             this.Name = "Form1";
             this.Text = "Snail Racing";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -826,6 +838,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolSnail9Win;
         private System.Windows.Forms.ToolStripMenuItem toolSnail10Win;
         private System.Windows.Forms.Button btnBet;
+        private System.Windows.Forms.ToolStripMenuItem resizeFormToolStripMenuItem;
     }
 }
 
