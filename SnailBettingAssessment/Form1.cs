@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -35,6 +36,7 @@ namespace SnailBettingAssessment
             SnailTimer.Elapsed += MoveASnail;
             Snails = Factory.GenerateSnails(NumberOfSnails);
             Beters = Factory.GenerateBetters(NumberOfBeters);
+            nudSnail.Maximum = NumberOfSnails;
             Height = (int)(NumberOfSnails+1.4) * 50 + tableLayoutPanel1.Height;
             tableLayoutPanel1.Location=new Point(12,NumberOfSnails*50+6);
             int i = 0;//kinda doing a for loop and a foreach loop at the same time, with only one loop
@@ -50,11 +52,7 @@ namespace SnailBettingAssessment
                     Snails[i].STARTING_LOCATION = Snails[i].Picture.Location;
                     i++;
                 }
-                catch//index out of range will be the only cause for this, which can be safely ignored
-                {
-                    
-                }
-
+                catch{}//index out of range will be the only cause for this, which can be safely ignored
             }
             i = 0;
             foreach (RadioButton rb in gbBeters.Controls.OfType<RadioButton>())
@@ -67,6 +65,8 @@ namespace SnailBettingAssessment
                 try
                 {
                     Beters[i].Radio = rb;//associates each beter with the correct radio button
+                    Beters[i].Radio.Text = Beters[i].Name;
+                    Thread.Sleep(5);//because my computer is slow...
                     i++;
                 }
                 catch//index out of range will be the only cause for this, which can be safely ignored
@@ -84,6 +84,7 @@ namespace SnailBettingAssessment
                 try
                 {
                     Beters[i].Lbl = lbl;//associates each beter with the correct label
+                    Beters[i].Lbl.Text = "$"+Beters[i].CurrentBalance.ToString();
                     i++;
                 }
                 catch//index out of range will be the only cause for this, which can be safely ignored
@@ -104,6 +105,33 @@ namespace SnailBettingAssessment
         {
             DevMode.Speed = true;
         }
+        private void btnBet_Click(object sender, EventArgs e)
+        {
+            foreach (Beter currentBeter in Beters)
+            {
+                if (currentBeter.Radio.Checked && !currentBeter.IsOut)
+                {
+                    currentBeter.CurrentBet[0] = Convert.ToInt16(nudBet.Value);
+                    currentBeter.CurrentBet[1] = Convert.ToInt16(nudSnail.Value);
+                    currentBeter.CurrentBalance -= currentBeter.CurrentBet[0];
+                    currentBeter.Lbl.Text += " - Bet $"+currentBeter.CurrentBet[0].ToString();
+                    currentBeter.Radio.Enabled = false;
+                }
+            }
+        }
+
+        private void fakeRadioButton_Select(object sender, EventArgs e)
+        {
+            foreach (Beter b in Beters)
+            {
+                if (b.Radio == sender)
+                {
+                    nudBet.Text = "5";
+                    nudBet.Maximum = b.CurrentBalance;
+                }
+            }
+        }
+
 
         /// <summary>
         /// Triggered by timer SnailTimer
@@ -113,7 +141,7 @@ namespace SnailBettingAssessment
         private void MoveASnail(Object source, System.Timers.ElapsedEventArgs e)
         {
             int whichSnail = RandInt.Next(0,NumberOfSnails);
-            Snails[whichSnail].Picture.Location= new Point(DevMode.Speed? Snails[whichSnail].Picture.Location.X+100 : Snails[whichSnail].Picture.Location.X+20,Snails[whichSnail].Picture.Location.Y);
+            Snails[whichSnail].Picture.Location= new Point(DevMode.Speed? Snails[whichSnail].Picture.Location.X+200 : Snails[whichSnail].Picture.Location.X+20,Snails[whichSnail].Picture.Location.Y);
             if (Snails[whichSnail].Picture.Location.X+Snails[whichSnail].Picture.Width>=Width)//if the right side of the snail is at least touching the right side of the form
             {
                 RaceOver(whichSnail);
@@ -123,27 +151,36 @@ namespace SnailBettingAssessment
         private void RaceOver(int whichSnail)
         {
             SnailTimer.Stop();
-            MessageBox.Show("Snail " + whichSnail.ToString() + " has won!");
-            foreach (Control c in Controls)
-            {
-                c.Enabled = true;
-            }
+            MessageBox.Show("Snail " + (whichSnail+1).ToString() + " has won!");
             foreach (Beter currentBeter in Beters)
             {
-                if (currentBeter.CurrentBet[1]-1==whichSnail)//'list' starting at 1 -1 == array index starting at 0
+                if (currentBeter.CurrentBet[1]==whichSnail+1 && !currentBeter.IsOut)//list starting at 1 == array index starting at 0 +1
                 {
-                    currentBeter.JustWon = true;
                     int winnings = currentBeter.CurrentBet[0] * 2;
                     currentBeter.CurrentBalance += winnings;
                     MessageBox.Show(currentBeter.Name + " has won $" +winnings.ToString() + "!");
                 }
-                currentBeter.CheckOut();
-                //foreach (Snail racer in Snails)
-                //{
-                //    racer.Picture.Location = racer.STARTING_LOCATION;
-                //}
-            }            
 
+                if (!currentBeter.IsOut)
+                {
+                    currentBeter.Radio.Enabled = true;
+
+                    currentBeter.Lbl.Text= "$" + currentBeter.CurrentBalance.ToString();
+                    currentBeter.CheckOut();
+                }
+            }
+            foreach (Snail racer in Snails)
+            {
+                racer.Picture.Location = racer.STARTING_LOCATION;
+            }
+            foreach (Control c in Controls)
+            {
+                c.Enabled = true;
+            }
+            for (int i = 0; i < NumberOfBeters; i++)
+            {
+                Beters[i].Radio.PerformClick();
+            }
 
         }
 

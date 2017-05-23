@@ -10,8 +10,8 @@ namespace SnailBettingAssessment
     abstract class Beter
     {
         public int CurrentBalance { get; set; }
-        public int[] CurrentBet { get; set; } = {5, 1};//{ammount:,on snail:}
-        public bool JustWon { get; set; } = false;
+        public int[] CurrentBet { get; set; } = {0, 0};//{ammount:,on snail:}
+        public bool IsOut { get; set; } = false;
         public string Name { get; set; }
         public Label Lbl { get; set; }
         public RadioButton Radio { get; set; }
@@ -23,6 +23,7 @@ namespace SnailBettingAssessment
                 Lbl.Visible = false;
                 Radio.Enabled = false;
                 MessageBox.Show(Name + " has run out of money!");
+                IsOut = true;
             }
         }
     }

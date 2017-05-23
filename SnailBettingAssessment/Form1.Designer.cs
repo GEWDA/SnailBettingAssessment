@@ -33,7 +33,7 @@
             this.lblBet = new System.Windows.Forms.Label();
             this.nudBet = new System.Windows.Forms.NumericUpDown();
             this.lblSnail = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nudSnail = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gbBeters = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -70,9 +70,20 @@
             this.btnRace = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolActivateDevSpeed = new System.Windows.Forms.ToolStripMenuItem();
-            this.thisSnailsMoveWinsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.forceWinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolSnail1Win = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolSnail2Win = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolSnail3Win = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolSnail4Win = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolSnail5Win = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolSnail6Win = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolSnail7Win = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolSnail8Win = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolSnail9Win = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolSnail10Win = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnBet = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudBet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSnail)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.gbBeters.SuspendLayout();
             this.gbBet.SuspendLayout();
@@ -130,15 +141,20 @@
             this.lblSnail.Text = "on Snail:";
             this.lblSnail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // numericUpDown1
+            // nudSnail
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("DrippyPlums", 9.749999F);
-            this.numericUpDown1.Location = new System.Drawing.Point(84, 45);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(61, 24);
-            this.numericUpDown1.TabIndex = 5;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.nudSnail.Font = new System.Drawing.Font("DrippyPlums", 9.749999F);
+            this.nudSnail.Location = new System.Drawing.Point(84, 45);
+            this.nudSnail.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.nudSnail.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudSnail.Name = "nudSnail";
+            this.nudSnail.Size = new System.Drawing.Size(61, 24);
+            this.nudSnail.TabIndex = 5;
+            this.nudSnail.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -166,26 +182,26 @@
             this.gbBeters.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbBeters.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.gbBeters.Controls.Add(this.label10);
-            this.gbBeters.Controls.Add(this.label9);
-            this.gbBeters.Controls.Add(this.label8);
-            this.gbBeters.Controls.Add(this.label7);
-            this.gbBeters.Controls.Add(this.label6);
-            this.gbBeters.Controls.Add(this.label5);
-            this.gbBeters.Controls.Add(this.label4);
-            this.gbBeters.Controls.Add(this.label2);
             this.gbBeters.Controls.Add(this.label1);
-            this.gbBeters.Controls.Add(this.label3);
-            this.gbBeters.Controls.Add(this.radioButton10);
             this.gbBeters.Controls.Add(this.radioButton1);
-            this.gbBeters.Controls.Add(this.radioButton9);
+            this.gbBeters.Controls.Add(this.label2);
             this.gbBeters.Controls.Add(this.radioButton2);
-            this.gbBeters.Controls.Add(this.radioButton8);
+            this.gbBeters.Controls.Add(this.label3);
             this.gbBeters.Controls.Add(this.radioButton3);
-            this.gbBeters.Controls.Add(this.radioButton7);
+            this.gbBeters.Controls.Add(this.label4);
             this.gbBeters.Controls.Add(this.radioButton4);
-            this.gbBeters.Controls.Add(this.radioButton6);
+            this.gbBeters.Controls.Add(this.label5);
             this.gbBeters.Controls.Add(this.radioButton5);
+            this.gbBeters.Controls.Add(this.label6);
+            this.gbBeters.Controls.Add(this.radioButton6);
+            this.gbBeters.Controls.Add(this.label7);
+            this.gbBeters.Controls.Add(this.radioButton7);
+            this.gbBeters.Controls.Add(this.label8);
+            this.gbBeters.Controls.Add(this.radioButton8);
+            this.gbBeters.Controls.Add(this.label9);
+            this.gbBeters.Controls.Add(this.radioButton9);
+            this.gbBeters.Controls.Add(this.label10);
+            this.gbBeters.Controls.Add(this.radioButton10);
             this.gbBeters.Location = new System.Drawing.Point(3, 3);
             this.gbBeters.Name = "gbBeters";
             this.gbBeters.Size = new System.Drawing.Size(289, 282);
@@ -198,7 +214,7 @@
             this.label10.Location = new System.Drawing.Point(123, 254);
             this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 20);
+            this.label10.Size = new System.Drawing.Size(150, 20);
             this.label10.TabIndex = 25;
             this.label10.Text = "$";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -210,7 +226,7 @@
             this.label9.Location = new System.Drawing.Point(123, 228);
             this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(69, 20);
+            this.label9.Size = new System.Drawing.Size(150, 20);
             this.label9.TabIndex = 24;
             this.label9.Text = "$";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -222,7 +238,7 @@
             this.label8.Location = new System.Drawing.Point(123, 202);
             this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(69, 20);
+            this.label8.Size = new System.Drawing.Size(150, 20);
             this.label8.TabIndex = 23;
             this.label8.Text = "$";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -234,7 +250,7 @@
             this.label7.Location = new System.Drawing.Point(123, 176);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 20);
+            this.label7.Size = new System.Drawing.Size(150, 20);
             this.label7.TabIndex = 22;
             this.label7.Text = "$";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -246,7 +262,7 @@
             this.label6.Location = new System.Drawing.Point(123, 150);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 20);
+            this.label6.Size = new System.Drawing.Size(150, 20);
             this.label6.TabIndex = 21;
             this.label6.Text = "$";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -258,7 +274,7 @@
             this.label5.Location = new System.Drawing.Point(123, 124);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 20);
+            this.label5.Size = new System.Drawing.Size(150, 20);
             this.label5.TabIndex = 20;
             this.label5.Text = "$";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -270,7 +286,7 @@
             this.label4.Location = new System.Drawing.Point(123, 98);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 20);
+            this.label4.Size = new System.Drawing.Size(150, 20);
             this.label4.TabIndex = 19;
             this.label4.Text = "$";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -282,7 +298,7 @@
             this.label2.Location = new System.Drawing.Point(123, 46);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 20);
+            this.label2.Size = new System.Drawing.Size(150, 20);
             this.label2.TabIndex = 18;
             this.label2.Text = "$";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -294,7 +310,7 @@
             this.label1.Location = new System.Drawing.Point(123, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 20);
+            this.label1.Size = new System.Drawing.Size(150, 20);
             this.label1.TabIndex = 17;
             this.label1.Text = "$";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -306,7 +322,7 @@
             this.label3.Location = new System.Drawing.Point(123, 72);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 20);
+            this.label3.Size = new System.Drawing.Size(150, 20);
             this.label3.TabIndex = 6;
             this.label3.Text = "$";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -323,6 +339,7 @@
             this.radioButton10.Text = "radioButton10";
             this.radioButton10.UseVisualStyleBackColor = true;
             this.radioButton10.Visible = false;
+            this.radioButton10.Click += new System.EventHandler(this.fakeRadioButton_Select);
             // 
             // radioButton1
             // 
@@ -335,6 +352,7 @@
             this.radioButton1.Text = "radioButton1";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.Visible = false;
+            this.radioButton1.Click += new System.EventHandler(this.fakeRadioButton_Select);
             // 
             // radioButton9
             // 
@@ -347,6 +365,7 @@
             this.radioButton9.Text = "radioButton9";
             this.radioButton9.UseVisualStyleBackColor = true;
             this.radioButton9.Visible = false;
+            this.radioButton9.Click += new System.EventHandler(this.fakeRadioButton_Select);
             // 
             // radioButton2
             // 
@@ -359,6 +378,7 @@
             this.radioButton2.Text = "radioButton2";
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.Visible = false;
+            this.radioButton2.Click += new System.EventHandler(this.fakeRadioButton_Select);
             // 
             // radioButton8
             // 
@@ -371,6 +391,7 @@
             this.radioButton8.Text = "radioButton8";
             this.radioButton8.UseVisualStyleBackColor = true;
             this.radioButton8.Visible = false;
+            this.radioButton8.Click += new System.EventHandler(this.fakeRadioButton_Select);
             // 
             // radioButton3
             // 
@@ -383,6 +404,7 @@
             this.radioButton3.Text = "radioButton3";
             this.radioButton3.UseVisualStyleBackColor = true;
             this.radioButton3.Visible = false;
+            this.radioButton3.Click += new System.EventHandler(this.fakeRadioButton_Select);
             // 
             // radioButton7
             // 
@@ -395,6 +417,7 @@
             this.radioButton7.Text = "radioButton7";
             this.radioButton7.UseVisualStyleBackColor = true;
             this.radioButton7.Visible = false;
+            this.radioButton7.Click += new System.EventHandler(this.fakeRadioButton_Select);
             // 
             // radioButton4
             // 
@@ -407,6 +430,7 @@
             this.radioButton4.Text = "radioButton4";
             this.radioButton4.UseVisualStyleBackColor = true;
             this.radioButton4.Visible = false;
+            this.radioButton4.Click += new System.EventHandler(this.fakeRadioButton_Select);
             // 
             // radioButton6
             // 
@@ -419,6 +443,7 @@
             this.radioButton6.Text = "radioButton6";
             this.radioButton6.UseVisualStyleBackColor = true;
             this.radioButton6.Visible = false;
+            this.radioButton6.Click += new System.EventHandler(this.fakeRadioButton_Select);
             // 
             // radioButton5
             // 
@@ -431,15 +456,17 @@
             this.radioButton5.Text = "radioButton5";
             this.radioButton5.UseVisualStyleBackColor = true;
             this.radioButton5.Visible = false;
+            this.radioButton5.Click += new System.EventHandler(this.fakeRadioButton_Select);
             // 
             // gbBet
             // 
             this.gbBet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbBet.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.gbBet.Controls.Add(this.btnBet);
             this.gbBet.Controls.Add(this.lblBet);
             this.gbBet.Controls.Add(this.nudBet);
-            this.gbBet.Controls.Add(this.numericUpDown1);
+            this.gbBet.Controls.Add(this.nudSnail);
             this.gbBet.Controls.Add(this.lblSnail);
             this.gbBet.Location = new System.Drawing.Point(298, 3);
             this.gbBet.Name = "gbBet";
@@ -592,22 +619,104 @@
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolActivateDevSpeed,
-            this.thisSnailsMoveWinsToolStripMenuItem});
+            this.forceWinToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(195, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(155, 48);
             // 
             // toolActivateDevSpeed
             // 
             this.toolActivateDevSpeed.Name = "toolActivateDevSpeed";
-            this.toolActivateDevSpeed.Size = new System.Drawing.Size(194, 22);
-            this.toolActivateDevSpeed.Text = ">>";
+            this.toolActivateDevSpeed.Size = new System.Drawing.Size(154, 22);
+            this.toolActivateDevSpeed.Text = ">>SPEEDUP>>";
             this.toolActivateDevSpeed.Click += new System.EventHandler(this.toolActivateDevSpeed_Click);
             // 
-            // thisSnailsMoveWinsToolStripMenuItem
+            // forceWinToolStripMenuItem
             // 
-            this.thisSnailsMoveWinsToolStripMenuItem.Name = "thisSnailsMoveWinsToolStripMenuItem";
-            this.thisSnailsMoveWinsToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.thisSnailsMoveWinsToolStripMenuItem.Text = "This Snail\'s Move Wins";
+            this.forceWinToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolSnail1Win,
+            this.toolSnail2Win,
+            this.toolSnail3Win,
+            this.toolSnail4Win,
+            this.toolSnail5Win,
+            this.toolSnail6Win,
+            this.toolSnail7Win,
+            this.toolSnail8Win,
+            this.toolSnail9Win,
+            this.toolSnail10Win});
+            this.forceWinToolStripMenuItem.Name = "forceWinToolStripMenuItem";
+            this.forceWinToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.forceWinToolStripMenuItem.Text = "Move = Win";
+            // 
+            // toolSnail1Win
+            // 
+            this.toolSnail1Win.Name = "toolSnail1Win";
+            this.toolSnail1Win.Size = new System.Drawing.Size(152, 22);
+            this.toolSnail1Win.Text = "Snail 1";
+            // 
+            // toolSnail2Win
+            // 
+            this.toolSnail2Win.Name = "toolSnail2Win";
+            this.toolSnail2Win.Size = new System.Drawing.Size(152, 22);
+            this.toolSnail2Win.Text = "Snail 2";
+            // 
+            // toolSnail3Win
+            // 
+            this.toolSnail3Win.Name = "toolSnail3Win";
+            this.toolSnail3Win.Size = new System.Drawing.Size(152, 22);
+            this.toolSnail3Win.Text = "Snail 3";
+            // 
+            // toolSnail4Win
+            // 
+            this.toolSnail4Win.Name = "toolSnail4Win";
+            this.toolSnail4Win.Size = new System.Drawing.Size(152, 22);
+            this.toolSnail4Win.Text = "Snail 4";
+            // 
+            // toolSnail5Win
+            // 
+            this.toolSnail5Win.Name = "toolSnail5Win";
+            this.toolSnail5Win.Size = new System.Drawing.Size(152, 22);
+            this.toolSnail5Win.Text = "Snail 5";
+            // 
+            // toolSnail6Win
+            // 
+            this.toolSnail6Win.Name = "toolSnail6Win";
+            this.toolSnail6Win.Size = new System.Drawing.Size(152, 22);
+            this.toolSnail6Win.Text = "Snail 6";
+            // 
+            // toolSnail7Win
+            // 
+            this.toolSnail7Win.Name = "toolSnail7Win";
+            this.toolSnail7Win.Size = new System.Drawing.Size(152, 22);
+            this.toolSnail7Win.Text = "Snail 7";
+            // 
+            // toolSnail8Win
+            // 
+            this.toolSnail8Win.Name = "toolSnail8Win";
+            this.toolSnail8Win.Size = new System.Drawing.Size(152, 22);
+            this.toolSnail8Win.Text = "Snail 8";
+            // 
+            // toolSnail9Win
+            // 
+            this.toolSnail9Win.Name = "toolSnail9Win";
+            this.toolSnail9Win.Size = new System.Drawing.Size(152, 22);
+            this.toolSnail9Win.Text = "Snail 9";
+            // 
+            // toolSnail10Win
+            // 
+            this.toolSnail10Win.Name = "toolSnail10Win";
+            this.toolSnail10Win.Size = new System.Drawing.Size(152, 22);
+            this.toolSnail10Win.Text = "Snail 10";
+            // 
+            // btnBet
+            // 
+            this.btnBet.Font = new System.Drawing.Font("DrippyPlums", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBet.Location = new System.Drawing.Point(84, 71);
+            this.btnBet.Name = "btnBet";
+            this.btnBet.Size = new System.Drawing.Size(61, 23);
+            this.btnBet.TabIndex = 26;
+            this.btnBet.Text = "Bet";
+            this.btnBet.UseVisualStyleBackColor = true;
+            this.btnBet.Click += new System.EventHandler(this.btnBet_Click);
             // 
             // Form1
             // 
@@ -633,7 +742,7 @@
             this.Text = "Snail Racing";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudBet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSnail)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.gbBeters.ResumeLayout(false);
             this.gbBeters.PerformLayout();
@@ -658,7 +767,7 @@
         private System.Windows.Forms.Label lblBet;
         private System.Windows.Forms.NumericUpDown nudBet;
         private System.Windows.Forms.Label lblSnail;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nudSnail;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.GroupBox gbBeters;
         private System.Windows.Forms.RadioButton radioButton10;
@@ -695,7 +804,18 @@
         private System.Windows.Forms.Button btnRace;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolActivateDevSpeed;
-        private System.Windows.Forms.ToolStripMenuItem thisSnailsMoveWinsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem forceWinToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolSnail1Win;
+        private System.Windows.Forms.ToolStripMenuItem toolSnail2Win;
+        private System.Windows.Forms.ToolStripMenuItem toolSnail3Win;
+        private System.Windows.Forms.ToolStripMenuItem toolSnail4Win;
+        private System.Windows.Forms.ToolStripMenuItem toolSnail5Win;
+        private System.Windows.Forms.ToolStripMenuItem toolSnail6Win;
+        private System.Windows.Forms.ToolStripMenuItem toolSnail7Win;
+        private System.Windows.Forms.ToolStripMenuItem toolSnail8Win;
+        private System.Windows.Forms.ToolStripMenuItem toolSnail9Win;
+        private System.Windows.Forms.ToolStripMenuItem toolSnail10Win;
+        private System.Windows.Forms.Button btnBet;
     }
 }
 
