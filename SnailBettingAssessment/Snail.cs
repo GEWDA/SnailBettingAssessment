@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SnailBettingAssessment
 {
@@ -12,6 +14,8 @@ namespace SnailBettingAssessment
         public int MaxSpeed { get; set; }
         public int MinSpeed { get; set; }
         public int RemainingTrack { get; set; }
-        public Random RandomMovement = new Random();
+        public PictureBox Picture { get; set; }
+        public Point STARTING_LOCATION { get; set; }
+        //public Random RandomMovement = new Random();
     }
 }

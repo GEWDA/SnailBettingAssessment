@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Beter.cs" />
     <Compile Include="BeterTypes.cs" />
+    <Compile Include="DevMode.cs" />
     <Compile Include="Factory.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

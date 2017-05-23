@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lblBet = new System.Windows.Forms.Label();
             this.nudBet = new System.Windows.Forms.NumericUpDown();
@@ -66,6 +67,10 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.btnRace = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolActivateDevSpeed = new System.Windows.Forms.ToolStripMenuItem();
+            this.thisSnailsMoveWinsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.nudBet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -81,6 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblBet
@@ -147,6 +153,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.gbBeters, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.gbBet, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnRace, 2, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 253);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -154,7 +161,7 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1181, 292);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
-            // gbBetters
+            // gbBeters
             // 
             this.gbBeters.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -180,7 +187,7 @@
             this.gbBeters.Controls.Add(this.radioButton6);
             this.gbBeters.Controls.Add(this.radioButton5);
             this.gbBeters.Location = new System.Drawing.Point(3, 3);
-            this.gbBeters.Name = "gbBetters";
+            this.gbBeters.Name = "gbBeters";
             this.gbBeters.Size = new System.Drawing.Size(289, 282);
             this.gbBeters.TabIndex = 7;
             this.gbBeters.TabStop = false;
@@ -570,22 +577,55 @@
             this.pictureBox10.TabStop = false;
             this.pictureBox10.Visible = false;
             // 
+            // btnRace
+            // 
+            this.btnRace.Font = new System.Drawing.Font("DrippyPlums", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRace.Location = new System.Drawing.Point(593, 3);
+            this.btnRace.Name = "btnRace";
+            this.btnRace.Size = new System.Drawing.Size(585, 286);
+            this.btnRace.TabIndex = 17;
+            this.btnRace.Text = "Begin Race";
+            this.btnRace.UseVisualStyleBackColor = true;
+            this.btnRace.Click += new System.EventHandler(this.btnRace_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolActivateDevSpeed,
+            this.thisSnailsMoveWinsToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(195, 48);
+            // 
+            // toolActivateDevSpeed
+            // 
+            this.toolActivateDevSpeed.Name = "toolActivateDevSpeed";
+            this.toolActivateDevSpeed.Size = new System.Drawing.Size(194, 22);
+            this.toolActivateDevSpeed.Text = ">>";
+            this.toolActivateDevSpeed.Click += new System.EventHandler(this.toolActivateDevSpeed_Click);
+            // 
+            // thisSnailsMoveWinsToolStripMenuItem
+            // 
+            this.thisSnailsMoveWinsToolStripMenuItem.Name = "thisSnailsMoveWinsToolStripMenuItem";
+            this.thisSnailsMoveWinsToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.thisSnailsMoveWinsToolStripMenuItem.Text = "This Snail\'s Move Wins";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1205, 554);
-            this.Controls.Add(this.pictureBox10);
-            this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.pictureBox9);
+            this.Controls.Add(this.pictureBox10);
             this.Font = new System.Drawing.Font("DrippyPlums", 9.749999F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -608,6 +648,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -651,6 +692,10 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.Button btnRace;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolActivateDevSpeed;
+        private System.Windows.Forms.ToolStripMenuItem thisSnailsMoveWinsToolStripMenuItem;
     }
 }
 
