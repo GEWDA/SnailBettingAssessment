@@ -140,7 +140,8 @@ namespace SnailBettingAssessment
         }
         private void resizeFormToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            DevMode.Resize = true;
+            FormBorderStyle=FormBorderStyle.Sizable;
         }
 
         /// <summary>

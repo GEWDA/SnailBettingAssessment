@@ -623,7 +623,7 @@
             this.forceWinToolStripMenuItem,
             this.resizeFormToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(155, 92);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(155, 70);
             // 
             // toolActivateDevSpeed
             // 
@@ -755,11 +755,10 @@
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox10);
             this.Font = new System.Drawing.Font("DrippyPlums", 9.749999F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1221, 593);
-            this.MinimumSize = new System.Drawing.Size(1221, 593);
             this.Name = "Form1";
             this.Text = "Snail Racing";
             this.Load += new System.EventHandler(this.Form1_Load);
