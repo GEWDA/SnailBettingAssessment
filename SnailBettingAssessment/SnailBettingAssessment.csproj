@@ -123,5 +123,8 @@
   <ItemGroup>
     <None Include="Snail_10.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Gary_the_Snail.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
