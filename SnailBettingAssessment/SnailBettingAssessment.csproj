@@ -126,5 +126,8 @@
   <ItemGroup>
     <None Include="Gary_the_Snail.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Squish_1_Short.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

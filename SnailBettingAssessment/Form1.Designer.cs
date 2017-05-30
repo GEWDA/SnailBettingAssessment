@@ -36,27 +36,29 @@
             this.nudSnail = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gbBeters = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.label3 = new System.Windows.Forms.Label();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.label4 = new System.Windows.Forms.Label();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.label5 = new System.Windows.Forms.Label();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.label8 = new System.Windows.Forms.Label();
+            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.label9 = new System.Windows.Forms.Label();
+            this.radioButton9 = new System.Windows.Forms.RadioButton();
+            this.label10 = new System.Windows.Forms.Label();
+            this.radioButton10 = new System.Windows.Forms.RadioButton();
             this.gbBet = new System.Windows.Forms.GroupBox();
+            this.btnBet = new System.Windows.Forms.Button();
+            this.btnRace = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -67,7 +69,6 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.btnRace = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolActivateDevSpeed = new System.Windows.Forms.ToolStripMenuItem();
             this.forceWinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,7 +82,6 @@
             this.toolSnail8Win = new System.Windows.Forms.ToolStripMenuItem();
             this.toolSnail9Win = new System.Windows.Forms.ToolStripMenuItem();
             this.toolSnail10Win = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnBet = new System.Windows.Forms.Button();
             this.resizeFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.nudBet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSnail)).BeginInit();
@@ -165,8 +165,8 @@
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.75275F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.20491F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.gbBeters, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.gbBet, 1, 0);
@@ -205,142 +205,21 @@
             this.gbBeters.Controls.Add(this.radioButton10);
             this.gbBeters.Location = new System.Drawing.Point(3, 3);
             this.gbBeters.Name = "gbBeters";
-            this.gbBeters.Size = new System.Drawing.Size(289, 282);
+            this.gbBeters.Size = new System.Drawing.Size(369, 282);
             this.gbBeters.TabIndex = 7;
             this.gbBeters.TabStop = false;
-            // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("DrippyPlums", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(123, 254);
-            this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(150, 20);
-            this.label10.TabIndex = 25;
-            this.label10.Text = "$";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label10.Visible = false;
-            // 
-            // label9
-            // 
-            this.label9.Font = new System.Drawing.Font("DrippyPlums", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(123, 228);
-            this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(150, 20);
-            this.label9.TabIndex = 24;
-            this.label9.Text = "$";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label9.Visible = false;
-            // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("DrippyPlums", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(123, 202);
-            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(150, 20);
-            this.label8.TabIndex = 23;
-            this.label8.Text = "$";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label8.Visible = false;
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("DrippyPlums", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(123, 176);
-            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(150, 20);
-            this.label7.TabIndex = 22;
-            this.label7.Text = "$";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label7.Visible = false;
-            // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("DrippyPlums", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(123, 150);
-            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(150, 20);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "$";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label6.Visible = false;
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("DrippyPlums", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(123, 124);
-            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(150, 20);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "$";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Visible = false;
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("DrippyPlums", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(123, 98);
-            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(150, 20);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "$";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label4.Visible = false;
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("DrippyPlums", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(123, 46);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 20);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "$";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Visible = false;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("DrippyPlums", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(123, 20);
+            this.label1.Location = new System.Drawing.Point(92, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 20);
+            this.label1.Size = new System.Drawing.Size(269, 20);
             this.label1.TabIndex = 17;
             this.label1.Text = "$";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label1.Visible = false;
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("DrippyPlums", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(123, 72);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(150, 20);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "$";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Visible = false;
-            // 
-            // radioButton10
-            // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(6, 254);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(117, 20);
-            this.radioButton10.TabIndex = 16;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "radioButton10";
-            this.radioButton10.UseVisualStyleBackColor = true;
-            this.radioButton10.Visible = false;
-            this.radioButton10.Click += new System.EventHandler(this.fakeRadioButton_Select);
             // 
             // radioButton1
             // 
@@ -355,18 +234,17 @@
             this.radioButton1.Visible = false;
             this.radioButton1.Click += new System.EventHandler(this.fakeRadioButton_Select);
             // 
-            // radioButton9
+            // label2
             // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(6, 228);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(109, 20);
-            this.radioButton9.TabIndex = 15;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "radioButton9";
-            this.radioButton9.UseVisualStyleBackColor = true;
-            this.radioButton9.Visible = false;
-            this.radioButton9.Click += new System.EventHandler(this.fakeRadioButton_Select);
+            this.label2.Font = new System.Drawing.Font("DrippyPlums", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(92, 46);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(269, 20);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "$";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label2.Visible = false;
             // 
             // radioButton2
             // 
@@ -381,18 +259,17 @@
             this.radioButton2.Visible = false;
             this.radioButton2.Click += new System.EventHandler(this.fakeRadioButton_Select);
             // 
-            // radioButton8
+            // label3
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(6, 202);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(109, 20);
-            this.radioButton8.TabIndex = 14;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "radioButton8";
-            this.radioButton8.UseVisualStyleBackColor = true;
-            this.radioButton8.Visible = false;
-            this.radioButton8.Click += new System.EventHandler(this.fakeRadioButton_Select);
+            this.label3.Font = new System.Drawing.Font("DrippyPlums", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(92, 72);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(269, 20);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "$";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label3.Visible = false;
             // 
             // radioButton3
             // 
@@ -407,18 +284,17 @@
             this.radioButton3.Visible = false;
             this.radioButton3.Click += new System.EventHandler(this.fakeRadioButton_Select);
             // 
-            // radioButton7
+            // label4
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(6, 176);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(110, 20);
-            this.radioButton7.TabIndex = 13;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "radioButton7";
-            this.radioButton7.UseVisualStyleBackColor = true;
-            this.radioButton7.Visible = false;
-            this.radioButton7.Click += new System.EventHandler(this.fakeRadioButton_Select);
+            this.label4.Font = new System.Drawing.Font("DrippyPlums", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(92, 98);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(269, 20);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "$";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label4.Visible = false;
             // 
             // radioButton4
             // 
@@ -433,18 +309,17 @@
             this.radioButton4.Visible = false;
             this.radioButton4.Click += new System.EventHandler(this.fakeRadioButton_Select);
             // 
-            // radioButton6
+            // label5
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(6, 150);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(109, 20);
-            this.radioButton6.TabIndex = 12;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "radioButton6";
-            this.radioButton6.UseVisualStyleBackColor = true;
-            this.radioButton6.Visible = false;
-            this.radioButton6.Click += new System.EventHandler(this.fakeRadioButton_Select);
+            this.label5.Font = new System.Drawing.Font("DrippyPlums", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(92, 124);
+            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(269, 20);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "$";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label5.Visible = false;
             // 
             // radioButton5
             // 
@@ -459,6 +334,131 @@
             this.radioButton5.Visible = false;
             this.radioButton5.Click += new System.EventHandler(this.fakeRadioButton_Select);
             // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("DrippyPlums", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(92, 150);
+            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(269, 20);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "$";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label6.Visible = false;
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.AutoSize = true;
+            this.radioButton6.Location = new System.Drawing.Point(6, 150);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(109, 20);
+            this.radioButton6.TabIndex = 12;
+            this.radioButton6.TabStop = true;
+            this.radioButton6.Text = "radioButton6";
+            this.radioButton6.UseVisualStyleBackColor = true;
+            this.radioButton6.Visible = false;
+            this.radioButton6.Click += new System.EventHandler(this.fakeRadioButton_Select);
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("DrippyPlums", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(92, 176);
+            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(269, 20);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "$";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label7.Visible = false;
+            // 
+            // radioButton7
+            // 
+            this.radioButton7.AutoSize = true;
+            this.radioButton7.Location = new System.Drawing.Point(6, 176);
+            this.radioButton7.Name = "radioButton7";
+            this.radioButton7.Size = new System.Drawing.Size(110, 20);
+            this.radioButton7.TabIndex = 13;
+            this.radioButton7.TabStop = true;
+            this.radioButton7.Text = "radioButton7";
+            this.radioButton7.UseVisualStyleBackColor = true;
+            this.radioButton7.Visible = false;
+            this.radioButton7.Click += new System.EventHandler(this.fakeRadioButton_Select);
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("DrippyPlums", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(92, 202);
+            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(269, 20);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "$";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label8.Visible = false;
+            // 
+            // radioButton8
+            // 
+            this.radioButton8.AutoSize = true;
+            this.radioButton8.Location = new System.Drawing.Point(6, 202);
+            this.radioButton8.Name = "radioButton8";
+            this.radioButton8.Size = new System.Drawing.Size(109, 20);
+            this.radioButton8.TabIndex = 14;
+            this.radioButton8.TabStop = true;
+            this.radioButton8.Text = "radioButton8";
+            this.radioButton8.UseVisualStyleBackColor = true;
+            this.radioButton8.Visible = false;
+            this.radioButton8.Click += new System.EventHandler(this.fakeRadioButton_Select);
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("DrippyPlums", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(92, 228);
+            this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(269, 20);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "$";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label9.Visible = false;
+            // 
+            // radioButton9
+            // 
+            this.radioButton9.AutoSize = true;
+            this.radioButton9.Location = new System.Drawing.Point(6, 228);
+            this.radioButton9.Name = "radioButton9";
+            this.radioButton9.Size = new System.Drawing.Size(109, 20);
+            this.radioButton9.TabIndex = 15;
+            this.radioButton9.TabStop = true;
+            this.radioButton9.Text = "radioButton9";
+            this.radioButton9.UseVisualStyleBackColor = true;
+            this.radioButton9.Visible = false;
+            this.radioButton9.Click += new System.EventHandler(this.fakeRadioButton_Select);
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("DrippyPlums", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(92, 254);
+            this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(269, 20);
+            this.label10.TabIndex = 25;
+            this.label10.Text = "$";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label10.Visible = false;
+            // 
+            // radioButton10
+            // 
+            this.radioButton10.AutoSize = true;
+            this.radioButton10.Location = new System.Drawing.Point(6, 254);
+            this.radioButton10.Name = "radioButton10";
+            this.radioButton10.Size = new System.Drawing.Size(117, 20);
+            this.radioButton10.TabIndex = 16;
+            this.radioButton10.TabStop = true;
+            this.radioButton10.Text = "radioButton10";
+            this.radioButton10.UseVisualStyleBackColor = true;
+            this.radioButton10.Visible = false;
+            this.radioButton10.Click += new System.EventHandler(this.fakeRadioButton_Select);
+            // 
             // gbBet
             // 
             this.gbBet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -469,11 +469,33 @@
             this.gbBet.Controls.Add(this.nudBet);
             this.gbBet.Controls.Add(this.nudSnail);
             this.gbBet.Controls.Add(this.lblSnail);
-            this.gbBet.Location = new System.Drawing.Point(298, 3);
+            this.gbBet.Location = new System.Drawing.Point(378, 3);
             this.gbBet.Name = "gbBet";
-            this.gbBet.Size = new System.Drawing.Size(289, 100);
+            this.gbBet.Size = new System.Drawing.Size(209, 100);
             this.gbBet.TabIndex = 7;
             this.gbBet.TabStop = false;
+            // 
+            // btnBet
+            // 
+            this.btnBet.Font = new System.Drawing.Font("DrippyPlums", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBet.Location = new System.Drawing.Point(84, 71);
+            this.btnBet.Name = "btnBet";
+            this.btnBet.Size = new System.Drawing.Size(61, 23);
+            this.btnBet.TabIndex = 26;
+            this.btnBet.Text = "Bet";
+            this.btnBet.UseVisualStyleBackColor = true;
+            this.btnBet.Click += new System.EventHandler(this.btnBet_Click);
+            // 
+            // btnRace
+            // 
+            this.btnRace.Font = new System.Drawing.Font("DrippyPlums", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRace.Location = new System.Drawing.Point(593, 3);
+            this.btnRace.Name = "btnRace";
+            this.btnRace.Size = new System.Drawing.Size(585, 286);
+            this.btnRace.TabIndex = 17;
+            this.btnRace.Text = "Begin Race";
+            this.btnRace.UseVisualStyleBackColor = true;
+            this.btnRace.Click += new System.EventHandler(this.btnRace_Click);
             // 
             // pictureBox1
             // 
@@ -605,17 +627,6 @@
             this.pictureBox10.TabStop = false;
             this.pictureBox10.Visible = false;
             // 
-            // btnRace
-            // 
-            this.btnRace.Font = new System.Drawing.Font("DrippyPlums", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRace.Location = new System.Drawing.Point(593, 3);
-            this.btnRace.Name = "btnRace";
-            this.btnRace.Size = new System.Drawing.Size(585, 286);
-            this.btnRace.TabIndex = 17;
-            this.btnRace.Text = "Begin Race";
-            this.btnRace.UseVisualStyleBackColor = true;
-            this.btnRace.Click += new System.EventHandler(this.btnRace_Click);
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -652,83 +663,72 @@
             // toolSnail1Win
             // 
             this.toolSnail1Win.Name = "toolSnail1Win";
-            this.toolSnail1Win.Size = new System.Drawing.Size(152, 22);
+            this.toolSnail1Win.Size = new System.Drawing.Size(114, 22);
             this.toolSnail1Win.Text = "Snail 1";
             this.toolSnail1Win.Click += new System.EventHandler(this.fakeToolActivateWin_Click);
             // 
             // toolSnail2Win
             // 
             this.toolSnail2Win.Name = "toolSnail2Win";
-            this.toolSnail2Win.Size = new System.Drawing.Size(152, 22);
+            this.toolSnail2Win.Size = new System.Drawing.Size(114, 22);
             this.toolSnail2Win.Text = "Snail 2";
             this.toolSnail2Win.Click += new System.EventHandler(this.fakeToolActivateWin_Click);
             // 
             // toolSnail3Win
             // 
             this.toolSnail3Win.Name = "toolSnail3Win";
-            this.toolSnail3Win.Size = new System.Drawing.Size(152, 22);
+            this.toolSnail3Win.Size = new System.Drawing.Size(114, 22);
             this.toolSnail3Win.Text = "Snail 3";
             this.toolSnail3Win.Click += new System.EventHandler(this.fakeToolActivateWin_Click);
             // 
             // toolSnail4Win
             // 
             this.toolSnail4Win.Name = "toolSnail4Win";
-            this.toolSnail4Win.Size = new System.Drawing.Size(152, 22);
+            this.toolSnail4Win.Size = new System.Drawing.Size(114, 22);
             this.toolSnail4Win.Text = "Snail 4";
             this.toolSnail4Win.Click += new System.EventHandler(this.fakeToolActivateWin_Click);
             // 
             // toolSnail5Win
             // 
             this.toolSnail5Win.Name = "toolSnail5Win";
-            this.toolSnail5Win.Size = new System.Drawing.Size(152, 22);
+            this.toolSnail5Win.Size = new System.Drawing.Size(114, 22);
             this.toolSnail5Win.Text = "Snail 5";
             this.toolSnail5Win.Click += new System.EventHandler(this.fakeToolActivateWin_Click);
             // 
             // toolSnail6Win
             // 
             this.toolSnail6Win.Name = "toolSnail6Win";
-            this.toolSnail6Win.Size = new System.Drawing.Size(152, 22);
+            this.toolSnail6Win.Size = new System.Drawing.Size(114, 22);
             this.toolSnail6Win.Text = "Snail 6";
             this.toolSnail6Win.Click += new System.EventHandler(this.fakeToolActivateWin_Click);
             // 
             // toolSnail7Win
             // 
             this.toolSnail7Win.Name = "toolSnail7Win";
-            this.toolSnail7Win.Size = new System.Drawing.Size(152, 22);
+            this.toolSnail7Win.Size = new System.Drawing.Size(114, 22);
             this.toolSnail7Win.Text = "Snail 7";
             this.toolSnail7Win.Click += new System.EventHandler(this.fakeToolActivateWin_Click);
             // 
             // toolSnail8Win
             // 
             this.toolSnail8Win.Name = "toolSnail8Win";
-            this.toolSnail8Win.Size = new System.Drawing.Size(152, 22);
+            this.toolSnail8Win.Size = new System.Drawing.Size(114, 22);
             this.toolSnail8Win.Text = "Snail 8";
             this.toolSnail8Win.Click += new System.EventHandler(this.fakeToolActivateWin_Click);
             // 
             // toolSnail9Win
             // 
             this.toolSnail9Win.Name = "toolSnail9Win";
-            this.toolSnail9Win.Size = new System.Drawing.Size(152, 22);
+            this.toolSnail9Win.Size = new System.Drawing.Size(114, 22);
             this.toolSnail9Win.Text = "Snail 9";
             this.toolSnail9Win.Click += new System.EventHandler(this.fakeToolActivateWin_Click);
             // 
             // toolSnail10Win
             // 
             this.toolSnail10Win.Name = "toolSnail10Win";
-            this.toolSnail10Win.Size = new System.Drawing.Size(152, 22);
+            this.toolSnail10Win.Size = new System.Drawing.Size(114, 22);
             this.toolSnail10Win.Text = "Snail 10";
             this.toolSnail10Win.Click += new System.EventHandler(this.fakeToolActivateWin_Click);
-            // 
-            // btnBet
-            // 
-            this.btnBet.Font = new System.Drawing.Font("DrippyPlums", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBet.Location = new System.Drawing.Point(84, 71);
-            this.btnBet.Name = "btnBet";
-            this.btnBet.Size = new System.Drawing.Size(61, 23);
-            this.btnBet.TabIndex = 26;
-            this.btnBet.Text = "Bet";
-            this.btnBet.UseVisualStyleBackColor = true;
-            this.btnBet.Click += new System.EventHandler(this.btnBet_Click);
             // 
             // resizeFormToolStripMenuItem
             // 
