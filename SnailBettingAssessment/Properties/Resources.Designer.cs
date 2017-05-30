@@ -81,6 +81,50 @@ namespace SnailBettingAssessment.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Joshua
+        ///Matthew
+        ///Daniel
+        ///James
+        ///Liam
+        ///Samuel
+        ///Benjamin
+        ///Thomas
+        ///Michael
+        ///Jacob
+        ///Jordan
+        ///Jack
+        ///Cameron
+        ///Jessica
+        ///Sarah
+        ///Hannah
+        ///Samantha
+        ///Emma
+        ///Rebecca
+        ///Nicole
+        ///Ashleigh
+        ///Laura
+        ///Danielle
+        ///Amy
+        ///Emily
+        ///Melissa.
+        /// </summary>
+        internal static string Names {
+            get {
+                return ResourceManager.GetString("Names", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sand {
+            get {
+                object obj = ResourceManager.GetObject("Sand", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Snail_10 {

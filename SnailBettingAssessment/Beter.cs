@@ -16,6 +16,9 @@ namespace SnailBettingAssessment
         public Label Lbl { get; set; }
         public RadioButton Radio { get; set; }
 
+        /// <summary>
+        /// Checks the Beter has a balance above 0
+        /// </summary>
         public void CheckOut()
         {
             if (CurrentBalance <= 0)
