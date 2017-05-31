@@ -40,19 +40,19 @@ namespace SnailBettingAssessment
 
         public void Form1_Load(object sender, EventArgs e)
         {
-            CheckForIllegalCrossThreadCalls = false;//this is usually a very bad idea
+            CheckForIllegalCrossThreadCalls = false;//this is usually a very bad idea. In this scenario it allows the timer to move the pictureboxes
             SnailTimer.Elapsed += MoveASnail;
             Snails = Factory.GenerateSnails(NumberOfSnails);
             Beters = Factory.GenerateBeters(NumberOfBeters);
-            nudSnail.Maximum = NumberOfSnails;
-            Height = (int)(NumberOfSnails+1.4) * 50 + tableLayoutPanel1.Height;
-            tableLayoutPanel1.Location=new Point(12,NumberOfSnails*50+6);
+            nudSnail.Maximum = NumberOfSnails;//you can not bet on a snail that doesn't exist
+            Height = (int)(NumberOfSnails+1.4) * 50 + tableLayoutPanel1.Height;//height depends on snails
+            tableLayoutPanel1.Location=new Point(12,NumberOfSnails*50+6);//location of betting area depends on snails
             sound.Stream = SnailBettingAssessment.Properties.Resources.Squish_1_Short;//Original Sound Created By: Mike Koenig , Downloaded From: http://soundbible.com/511-Squish-1.html , Sound Edited.
             sound.Load();
             SetupPictures();
             SetupRadioButtons();
             SetupLabels();
-            sound.Play();
+            sound.Play();//played here to both inform the user the game has started, and to prevent the sound lagging when the snails move for the first time
         }
 
         private void btnRace_Click(object sender, EventArgs e)
@@ -66,27 +66,27 @@ namespace SnailBettingAssessment
 
         private void toolActivateDevSpeed_Click(object sender, EventArgs e)
         {
-            DevMode.Speed = true;
+            DevMode.Speed = true;//speed x10
         }
 
         private void fakeToolActivateWin_Click(object sender, EventArgs e)
         {
             ToolStripMenuItem theSender = (ToolStripMenuItem) sender;
             DevMode.Win[0] = 1;
-            DevMode.Win[1] = Convert.ToInt16(theSender.Text.Substring(6))-1;
+            DevMode.Win[1] = Convert.ToInt16(theSender.Text.Substring(6))-1;//gets the 'number' from Move=Win > Snail 'number'
         }
 
         private void btnBet_Click(object sender, EventArgs e)
         {
             foreach (Beter currentBeter in Beters)
             {
-                if (currentBeter.Radio.Checked && !currentBeter.IsOut && currentBeter.Radio.Enabled)
+                if (currentBeter.Radio.Checked && !currentBeter.IsOut && currentBeter.Radio.Enabled)//checks the beter can place a bet, and has not already placed a bet
                 {
-                    currentBeter.CurrentBet[0] = Convert.ToInt16(nudBet.Value);
-                    currentBeter.CurrentBet[1] = Convert.ToInt16(nudSnail.Value);
+                    currentBeter.CurrentBet[0] = Convert.ToInt16(nudBet.Value);//bet amount...
+                    currentBeter.CurrentBet[1] = Convert.ToInt16(nudSnail.Value);//... on snail
                     currentBeter.CurrentBalance -= currentBeter.CurrentBet[0];
-                    currentBeter.Lbl.Text = currentBeter.CurrentBalance.ToString()+" - Bet $"+currentBeter.CurrentBet[0].ToString()+" on Snail "+currentBeter.CurrentBet[1].ToString();
-                    currentBeter.Radio.Enabled = false;
+                    currentBeter.Lbl.Text = currentBeter.CurrentBalance.ToString()+" - Bet $"+currentBeter.CurrentBet[0].ToString()+" on Snail "+currentBeter.CurrentBet[1].ToString();//feedback for user via label
+                    currentBeter.Radio.Enabled = false;//prevents multiple bets by same beter in the same race
                 }
             }
         }
@@ -98,7 +98,7 @@ namespace SnailBettingAssessment
                 if (b.Radio == sender)
                 {
                     nudBet.Text = "5";
-                    nudBet.Maximum = b.CurrentBalance;
+                    nudBet.Maximum = b.CurrentBalance;//resets the numberic up downs to prevent betting more than current balance
                 }
             }
         }
@@ -106,7 +106,7 @@ namespace SnailBettingAssessment
         private void resizeFormToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DevMode.Resize = true;
-            FormBorderStyle=FormBorderStyle.Sizable;
+            FormBorderStyle=FormBorderStyle.Sizable;//one method of changing race length is to resize the form
         }
 
         /// <summary>
@@ -119,10 +119,10 @@ namespace SnailBettingAssessment
             int whichSnail = RandInt.Next(0,NumberOfSnails);
             //below line: if it isn't an instant win for this exact snail, if speedup is on, move 200 pixels, otherwise move 20 pixels
             Snails[whichSnail].Picture.Location= new Point(DevMode.Win[0]==0 || DevMode.Win[1]!=whichSnail?DevMode.Speed? Snails[whichSnail].Picture.Location.X+200 : Snails[whichSnail].Picture.Location.X+20:Snails[whichSnail].Picture.Location.X + 9999999, Snails[whichSnail].Picture.Location.Y);
-            sound.Play();
-            if (Snails[whichSnail].Picture.Location.X+Snails[whichSnail].Picture.Width>=Width)//if the right side of the snail is at least touching the right side of the form
+            sound.Play();//(below line) the +16 is due to the borders of the form itself, which are not part of the drawn area but still count for the width of the form
+            if (Snails[whichSnail].Picture.Location.X+Snails[whichSnail].Picture.Width+16>=Width)//if the right side of the snail is at least touching the right side of the form...
             {
-                RaceOver(whichSnail);
+                RaceOver(whichSnail);//...this snail wins
             }
         }
 
