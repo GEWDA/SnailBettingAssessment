@@ -31,6 +31,8 @@ namespace SnailBettingAssessment
         private Random RandInt { get; set; } = new Random();
         private System.Timers.Timer SnailTimer =new System.Timers.Timer(){Enabled = false,Interval = 750,AutoReset = true};
         private SoundPlayer sound = new SoundPlayer();
+        private int NumOfOutBeters { get; set; }
+        private bool GameOverShown { get; set; }
 
 
         //EVENTS
@@ -78,12 +80,12 @@ namespace SnailBettingAssessment
         {
             foreach (Beter currentBeter in Beters)
             {
-                if (currentBeter.Radio.Checked && !currentBeter.IsOut)
+                if (currentBeter.Radio.Checked && !currentBeter.IsOut && currentBeter.Radio.Enabled)
                 {
                     currentBeter.CurrentBet[0] = Convert.ToInt16(nudBet.Value);
                     currentBeter.CurrentBet[1] = Convert.ToInt16(nudSnail.Value);
                     currentBeter.CurrentBalance -= currentBeter.CurrentBet[0];
-                    currentBeter.Lbl.Text += " - Bet $"+currentBeter.CurrentBet[0].ToString()+" on Snail "+currentBeter.CurrentBet[1].ToString();
+                    currentBeter.Lbl.Text = currentBeter.CurrentBalance.ToString()+" - Bet $"+currentBeter.CurrentBet[0].ToString()+" on Snail "+currentBeter.CurrentBet[1].ToString();
                     currentBeter.Radio.Enabled = false;
                 }
             }
@@ -131,6 +133,7 @@ namespace SnailBettingAssessment
         private void RaceOver(int whichSnail)
         {
             SnailTimer.Stop();
+            NumOfOutBeters = 0;//calculated within for loop
             DevMode.Speed = false;
             DevMode.Win[0] = 0;
             MessageBox.Show("Snail " + (whichSnail+1).ToString() + " has won!");
@@ -147,7 +150,12 @@ namespace SnailBettingAssessment
                 {
                     currentBeter.Radio.Enabled = true;
                     currentBeter.Lbl.Text= "$" + currentBeter.CurrentBalance.ToString();
-                    currentBeter.CheckOut();
+                    currentBeter.CheckOut();//checks the current beter still has money
+                    currentBeter.CurrentBet[0] = 0;//reset bet
+                }
+                if(currentBeter.IsOut)//can not be else statement, as beter might have just become out this round
+                {
+                    NumOfOutBeters++;
                 }
             }
             foreach (Snail racer in Snails)
@@ -156,12 +164,19 @@ namespace SnailBettingAssessment
             }
             foreach (Control c in Controls)
             {
-                c.Enabled = true;
+                c.Enabled = true;//does not reactivate radio buttons of betters with no money, as they are within another control
+            }
+            if (NumOfOutBeters == NumberOfBeters && !GameOverShown)//only triggers once
+            {
+                MessageBox.Show("All beters are out of money!\n(You may continue to spactate races)","Game Over");
+                GameOverShown = true;
+                Text += " (Spectating)";
             }
             for (int i = 0; i < NumberOfBeters; i++)
             {
-                Beters[i].Radio.PerformClick();
+                Beters[i].Radio.PerformClick();//to reset numeric up downs, and deselect any beters who have run out of money
             }
+
         }
 
         private void SetupLabels()
@@ -181,7 +196,7 @@ namespace SnailBettingAssessment
                     i++;
                 }
                 catch //index out of range will be the only cause for this (due to variable number of beters), which can be safely ignored
-                {
+                {//should catch 10 - NumberOfBeters exceptions
                 }
             }
         }
@@ -205,7 +220,7 @@ namespace SnailBettingAssessment
                     i++;
                 }
                 catch //index out of range will be the only cause for this, which can be safely ignored
-                {
+                {//should catch 10 - NumberOfBeters exceptions
                 }
             }
         }
@@ -226,9 +241,9 @@ namespace SnailBettingAssessment
                     Snails[i].STARTING_LOCATION = Snails[i].Picture.Location;
                     i++;
                 }
-                catch
-                {
-                } //index out of range will be the only cause for this (due to variable number of snails) , which can be safely ignored
+                catch//index out of range will be the only cause for this (due to variable number of snails) , which can be safely ignored
+                {//should catch 10 - NumberOfSnails exceptions
+                }//...meaning total exceptions on Form1_Load should be 10-NumberOfSnails+2*(10-NumberOfBeters)
             }
         }
     }
