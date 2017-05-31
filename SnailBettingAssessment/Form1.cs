@@ -15,40 +15,43 @@ namespace SnailBettingAssessment
     public partial class Form1 : Form
     {
         //SETUP
+
+
         public Form1(int snailsPassed=4,int betersPassed=3)//defaults for unit testing purposes
         {
             InitializeComponent();
-            NumberOfSnails = snailsPassed;
-            NumberOfBeters = betersPassed;
+            NumberOfSnails = snailsPassed;//from form 2
+            NumberOfBeters = betersPassed;//from form 2
 
         }
         public int NumberOfSnails { get; set; }
         public int NumberOfBeters { get; set; }
-        Snail[] Snails { get; set; }
+        private Snail[] Snails { get; set; }
         private Beter[] Beters { get; set; }
         private Random RandInt { get; set; } = new Random();
         private System.Timers.Timer SnailTimer =new System.Timers.Timer(){Enabled = false,Interval = 750,AutoReset = true};
         private SoundPlayer sound = new SoundPlayer();
 
+
         //EVENTS
-        private void Form1_Load(object sender, EventArgs e)
+
+
+        public void Form1_Load(object sender, EventArgs e)
         {
             CheckForIllegalCrossThreadCalls = false;//this is usually a very bad idea
             SnailTimer.Elapsed += MoveASnail;
             Snails = Factory.GenerateSnails(NumberOfSnails);
-            Beters = Factory.GenerateBetters(NumberOfBeters);
+            Beters = Factory.GenerateBeters(NumberOfBeters);
             nudSnail.Maximum = NumberOfSnails;
             Height = (int)(NumberOfSnails+1.4) * 50 + tableLayoutPanel1.Height;
             tableLayoutPanel1.Location=new Point(12,NumberOfSnails*50+6);
             sound.Stream = SnailBettingAssessment.Properties.Resources.Squish_1_Short;//Original Sound Created By: Mike Koenig , Downloaded From: http://soundbible.com/511-Squish-1.html , Sound Edited.
             sound.Load();
-            sound.Play();
             SetupPictures();
             SetupRadioButtons();
             SetupLabels();
+            sound.Play();
         }
-
-
 
         private void btnRace_Click(object sender, EventArgs e)
         {
@@ -58,6 +61,7 @@ namespace SnailBettingAssessment
             }
             SnailTimer.Start();
         }
+
         private void toolActivateDevSpeed_Click(object sender, EventArgs e)
         {
             DevMode.Speed = true;
@@ -69,6 +73,7 @@ namespace SnailBettingAssessment
             DevMode.Win[0] = 1;
             DevMode.Win[1] = Convert.ToInt16(theSender.Text.Substring(6))-1;
         }
+
         private void btnBet_Click(object sender, EventArgs e)
         {
             foreach (Beter currentBeter in Beters)
@@ -95,6 +100,7 @@ namespace SnailBettingAssessment
                 }
             }
         }
+
         private void resizeFormToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DevMode.Resize = true;
@@ -117,7 +123,11 @@ namespace SnailBettingAssessment
                 RaceOver(whichSnail);
             }
         }
+
+
         //METHODS
+
+
         private void RaceOver(int whichSnail)
         {
             SnailTimer.Stop();
@@ -136,7 +146,6 @@ namespace SnailBettingAssessment
                 if (!currentBeter.IsOut)
                 {
                     currentBeter.Radio.Enabled = true;
-
                     currentBeter.Lbl.Text= "$" + currentBeter.CurrentBalance.ToString();
                     currentBeter.CheckOut();
                 }
@@ -153,7 +162,6 @@ namespace SnailBettingAssessment
             {
                 Beters[i].Radio.PerformClick();
             }
-
         }
 
         private void SetupLabels()
@@ -204,17 +212,17 @@ namespace SnailBettingAssessment
 
         private void SetupPictures()
         {
-            int i = 0; //kinda doing a for loop and a foreach loop at the same time, with only one loop
+            int i = 0; //kinda doing a for loop and a foreach loop at the same time, ith only one loop
             foreach (PictureBox picture in Controls.OfType<PictureBox>())
             {
-                if (Convert.ToInt16(picture.Name.Substring(10)) <= NumberOfSnails
-                ) //checks the 'number' of picturebox'number' is not greater than the number that should be loaded
+                if (Convert.ToInt16(picture.Name.Substring(10)) <= NumberOfSnails)//checks the 'number' of picturebox'number' is not greater than the number that should be loaded
                 {
                     picture.Visible = true;
                 }
                 try
                 {
                     Snails[i].Picture = picture; //associates each snail with the correct picture box
+                    Snails[i].Picture.Location=new Point(0,50*i);
                     Snails[i].STARTING_LOCATION = Snails[i].Picture.Location;
                     i++;
                 }
@@ -223,7 +231,5 @@ namespace SnailBettingAssessment
                 } //index out of range will be the only cause for this (due to variable number of snails) , which can be safely ignored
             }
         }
-
-
     }
 }

@@ -164,6 +164,7 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.75275F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.20491F));
@@ -173,8 +174,9 @@
             this.tableLayoutPanel1.Controls.Add(this.btnRace, 2, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 253);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1181, 292);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
@@ -499,6 +501,8 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::SnailBettingAssessment.Properties.Resources.Gary_the_Snail;
             this.pictureBox1.ImageLocation = "";
             this.pictureBox1.InitialImage = null;
@@ -512,6 +516,8 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::SnailBettingAssessment.Properties.Resources.Snail_2;
             this.pictureBox2.ImageLocation = "";
             this.pictureBox2.InitialImage = null;
@@ -525,6 +531,8 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::SnailBettingAssessment.Properties.Resources.Snail_3;
             this.pictureBox3.ImageLocation = "";
             this.pictureBox3.InitialImage = null;
@@ -538,6 +546,8 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::SnailBettingAssessment.Properties.Resources.Snail_4;
             this.pictureBox4.ImageLocation = "";
             this.pictureBox4.InitialImage = null;
@@ -551,6 +561,8 @@
             // 
             // pictureBox5
             // 
+            this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::SnailBettingAssessment.Properties.Resources.Snail_5;
             this.pictureBox5.ImageLocation = "";
             this.pictureBox5.InitialImage = null;
@@ -564,6 +576,8 @@
             // 
             // pictureBox6
             // 
+            this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Image = global::SnailBettingAssessment.Properties.Resources.Snail_6;
             this.pictureBox6.ImageLocation = "";
             this.pictureBox6.InitialImage = null;
@@ -577,6 +591,8 @@
             // 
             // pictureBox7
             // 
+            this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Image = global::SnailBettingAssessment.Properties.Resources.Snail_7;
             this.pictureBox7.ImageLocation = "";
             this.pictureBox7.InitialImage = null;
@@ -590,6 +606,8 @@
             // 
             // pictureBox8
             // 
+            this.pictureBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Image = global::SnailBettingAssessment.Properties.Resources.Snail_8;
             this.pictureBox8.ImageLocation = "";
             this.pictureBox8.InitialImage = null;
@@ -603,6 +621,8 @@
             // 
             // pictureBox9
             // 
+            this.pictureBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox9.Image = global::SnailBettingAssessment.Properties.Resources.Snail_9;
             this.pictureBox9.ImageLocation = "";
             this.pictureBox9.InitialImage = null;
@@ -616,6 +636,8 @@
             // 
             // pictureBox10
             // 
+            this.pictureBox10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox10.Image = global::SnailBettingAssessment.Properties.Resources.Snail_10;
             this.pictureBox10.ImageLocation = "";
             this.pictureBox10.InitialImage = null;
@@ -741,6 +763,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::SnailBettingAssessment.Properties.Resources.Sand;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1205, 554);
             this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.tableLayoutPanel1);
@@ -754,6 +778,7 @@
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox10);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("DrippyPlums", 9.749999F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
